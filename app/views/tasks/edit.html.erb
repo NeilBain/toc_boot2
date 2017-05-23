@@ -1,0 +1,17 @@
+<div class='content-section-a'>
+	<div class='container'>
+		<h1>Edit Task</h1>
+	</div>
+</div>
+
+<div class='content-section-b'>
+	<div class='container'> 
+		<%= render 'form'%>
+
+		<%= debug @project %>
+		<p>============</p>
+		<%= debug @task %>
+ 
+		<%= link_to 'Back', project_path(@project) %>
+	</div>
+</div>

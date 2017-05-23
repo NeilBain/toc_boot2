@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  av_duration: 1.5
+  max_duration: 1.5
+  toc_factor: 1.5
+  completed: false
+  due_date: 2017-05-22
+  project: one
+
+two:
+  description: MyString
+  av_duration: 1.5
+  max_duration: 1.5
+  toc_factor: 1.5
+  completed: false
+  due_date: 2017-05-22
+  project: two

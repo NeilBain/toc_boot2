@@ -1,0 +1,41 @@
+<div class='content-section-a'>
+	<div class='container'>
+		<h1>Listing Projects</h1>
+	</div>
+</div>
+
+<div class='content-section-b'>
+	<div class='container'>		
+		<%= link_to 'New Project', new_project_path %></br>
+
+		<table class='table'>
+			<tbody>	
+  				<tr>
+    				<th>Title</th>
+    				<th>Description</th>
+					<th>Minimum Duration</th>
+					<th>Maximum Duration</th>
+					<th>Predicted Duration</th>
+					<th> </th>
+					<th> </th>
+					<th> </th>
+  	  			</tr>
+ 
+  	  			<% @projects.each do |project| %>
+  	  			<tr>
+    				<td><%= project.title %></td>
+    				<td><%= project.description %></td>
+					<td><%= project.min_duration %></td>
+					<td><%= project.max_duration %></td>
+					<td><%= project.predicted_duration %></td>
+    				<td><%= link_to 'Show', project_path(project) %></td>
+					<td><%= link_to 'Edit', edit_project_path(project) %></td>
+					<td><%= link_to 'Destroy', project_path(project),
+	                				method: :delete,
+	                				data: { confirm: 'Are you sure?' } %></td>
+    			</tr>
+  	  			<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
