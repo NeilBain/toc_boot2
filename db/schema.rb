@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170522140610) do
+ActiveRecord::Schema.define(version: 20170523084500) do
 
   create_table "projects", force: :cascade do |t|
     t.string "title"
@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20170522140610) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "description"
-    t.float "av_duration"
-    t.float "max_duration"
+    t.float "av_duration", default: 1.0
+    t.float "max_duration", default: 1.0
     t.float "toc_factor"
     t.boolean "completed"
     t.date "due_date"
