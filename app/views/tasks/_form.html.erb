@@ -10,18 +10,26 @@
         </ul>
      </div>
   <% end %>
-  	<div class='form-group'>
+ 	<div class='form-group'>
   		<%= f.label :description %><br>
    		<%= f.text_field :description %>
 	</div>
-	<div class='form-group'>
-    	<%= f.label :av_duration %><br>
-    	<%= f.text_field :av_duration %>
-	</div>
-	<div class='form-group'>
-    	<%= f.label :max_duration%><br>
-    	<%= f.text_field :max_duration %>
-	 </div>
+	  <div class='form-group'>
+    	  <%= f.label 'Average Duration' %><br>
+    	  <%= f.text_field :av_duration %>
+	  </div>
+	  <div class='form-group'>
+    	  <%= f.label 'Maximum Duration' %><br>
+    	  <%= f.text_field :max_duration %>
+	  </div>
+	  <div class='form-group'>
+    	  <%= f.label :due_date %><br>
+    	  <%= f.date_field :due_date %>
+	  </div>
+	  <div class='form-group'>
+    	  <%= f.label :completed %><br>
+    	  <%= f.check_box :completed %>
+	  </div>
  	 <%= f.submit %>
   <% end %>
 </div>
