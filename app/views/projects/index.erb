@@ -30,14 +30,13 @@
 					<td><%= project.min_duration %></td>
 					<td><%= project.max_duration %></td>
 					<td><%= number_with_precision(project.predicted_duration, precision: 1) %></td>
-					<td><%= link_to edit_project_path(project), class: "btn btn-primary" do %>
-						<i class="glyphicon glyphicon-edit"></i>
+					<td><%= link_to edit_project_path(project) do %>
+						<%= icon('edit')%>
 						<% end %></td>
 					<td><%= link_to project_path(project),
 	                				method: :delete,
-	                				data: { confirm: 'Are you sure you want to delete this? (Cannot be undone)' },
-									class: "btn btn-danger" do %>
-									<i class="glyphicon glyphicon-trash"></i>
+	                				data: { confirm: 'Are you sure you want to delete this? (Cannot be undone)' } do %>
+									<%= icon('trash')%>
 						<% end %></td>
     			</tr>
   	  			<% end %>
